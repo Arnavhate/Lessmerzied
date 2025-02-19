@@ -1,10 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const downloadButton = document.getElementById('downloadBtn');
-    
-    if (downloadButton) {
-        downloadButton.addEventListener('click', (event) => {
-            event.preventDefault();
-            window.location.href = 'Lessmerzied.rar';
-        });
-    }
-});
+function downloadGame() {
+    const link = document.createElement('a');
+    link.href = 'Lessmerzied.rar';
+    link.download = 'Lessmerzied.rar';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+function downloadFix() {
+    const link = document.createElement('a');
+    link.href = 'fix.rar';
+    link.download = 'fix.rar';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
